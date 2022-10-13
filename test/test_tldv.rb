@@ -7,7 +7,30 @@ class TestTLDv < Minitest::Test
     refute_nil ::TLDv::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_valid_tlds
+    %w[
+      at
+      AT
+      com
+      uk
+      horse
+    ].each do |tld|
+      assert ::TLDv.valid?(tld)
+    end
+  end
+
+  def test_invalid_tlds
+    %w[
+      carrd
+      con
+      coom
+      cmo
+      mail
+
+      ATX
+      CON
+    ].each do |tld|
+      refute ::TLDv.valid?(tld)
+    end
   end
 end
