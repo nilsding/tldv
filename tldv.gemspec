@@ -5,7 +5,7 @@ require_relative "lib/tldv/version"
 Gem::Specification.new do |spec|
   spec.name = "tldv"
   spec.version = TLDv::VERSION
-  spec.authors = ["Georg Gadinger"]
+  spec.authors = ["Jyrki Gadinger"]
   spec.email = ["nilsding@nilsding.org"]
 
   spec.summary = "checks if a TLD is valid"
